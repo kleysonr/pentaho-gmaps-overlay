@@ -1,203 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <DesignerComponent>
-	<Header>
-		<Name>Google Maps Overlay Component</Name>
-		<IName>gMapsOverlayComponent</IName>
-		<Description>Google Maps Overlay Component (By Kleyson Rios)</Description>
-		<Category>COMMUNITYCOMPONENTS</Category>
-		<CatDescription>Community Contributions</CatDescription>
-		<Type>PalleteEntry</Type>
-		<Version>2.0</Version>
-	</Header>
-	<Contents>
-		<Model>
-			<Property name="width" type="number">width</Property>
-			<Property name="height" type="number">height</Property>
-			<Property type="boolean">executeAtStart</Property>
-			<Property type="string">htmlObject</Property>
-			<Property type="number">listeners</Property>
-			<Property type="function">postFetch</Property>
-			<Property type="function">preExecution</Property>
-			<Property type="function">postExecution</Property>
-			<Property name="parameters">xActionArrayParameter</Property>
-			<Definition name="queryDefinition">
-				<Property type="query">dataSource</Property>
-			</Definition>
-			<Property>mapName</Property>
-			<Property>mapWidth</Property>
-			<Property>mapHeight</Property>
-			<Property>centerLatitude</Property>
-			<Property>centerLongitude</Property>
-			<Property>defaultColor</Property>
-			<Property>defaultZoomLevel</Property>
-			<Property>legend</Property>
-			<Property>legendText</Property>
-			<Property>sourceText</Property>
-			<Property>search</Property>
-		</Model>
-		<Implementation>
-			<Code src="gmapsoverlay-implementation.js" />
-			<Dependencies>
-				<Dependency src="GMapComponentAsyncLoader.js" version="1.1">GMapComponentAsyncLoader</Dependency>
-			</Dependencies>
-			<Styles>
-				<Style src="gmapsoverlay.css">gMapsOverlayComponent</Style>
-			</Styles>
-			<CustomProperties>
-				<DesignerProperty>
-					<Header>
-						<Name>mapName</Name>
-						<Parent>BaseProperty</Parent>
-						<DefaultValue></DefaultValue>
-						<Description>Map Name</Description>
-						<Tooltip>This is the region descriptor file name that must be placed at cde/components/gmapsoverlay/map-def</Tooltip>
-						<Advanced>false</Advanced>
-						<InputType>String</InputType>
-						<OutputType>String</OutputType>
-						<Order>40</Order>
-						<Version>1.0</Version>
-					</Header>
-				</DesignerProperty>
-				<DesignerProperty>
-					<Header>
-						<Name>mapHeight</Name>
-						<Parent>BaseProperty</Parent>
-						<DefaultValue></DefaultValue>
-						<Description>Map Height</Description>
-						<Tooltip></Tooltip>
-						<Advanced>false</Advanced>
-						<InputType>Integer</InputType>
-						<OutputType>Number</OutputType>
-						<Order>40</Order>
-						<Version>1.0</Version>
-					</Header>
-				</DesignerProperty>
-				<DesignerProperty>
-					<Header>
-						<Name>mapWidth</Name>
-						<Parent>BaseProperty</Parent>
-						<DefaultValue></DefaultValue>
-						<Description>Map Width</Description>
-						<Tooltip></Tooltip>
-						<Advanced>false</Advanced>
-						<InputType>Integer</InputType>
-						<OutputType>Number</OutputType>
-						<Order>40</Order>
-						<Version>1.0</Version>
-					</Header>
-				</DesignerProperty>
-				<DesignerProperty>
-					<Header>
-						<Name>centerLatitude</Name>
-						<Parent>BaseProperty</Parent>
-						<DefaultValue></DefaultValue>
-						<Description>Center Latitude</Description>
-						<Tooltip> Center latitude for map</Tooltip>
-						<Advanced>false</Advanced>
-						<InputType>Float</InputType>
-						<OutputType>Number</OutputType>
-						<Order>40</Order>
-						<Version>1.0</Version>
-					</Header>
-				</DesignerProperty>
-				<DesignerProperty>
-					<Header>
-						<Name>centerLongitude</Name>
-						<Parent>BaseProperty</Parent>
-						<DefaultValue></DefaultValue>
-						<Description>Center Longitude</Description>
-						<Tooltip>Center Longitude for Map</Tooltip>
-						<Advanced>false</Advanced>
-						<InputType>Float</InputType>
-						<OutputType>Number</OutputType>
-						<Order>40</Order>
-						<Version>1.0</Version>
-					</Header>
-				</DesignerProperty>
-				<DesignerProperty>
-					<Header>
-						<Name>defaultColor</Name>
-						<Parent>BaseProperty</Parent>
-						<DefaultValue></DefaultValue>
-						<Description>Default Color</Description>
-						<Tooltip>Default color for the map</Tooltip>
-						<Advanced>false</Advanced>
-						<InputType>String</InputType>
-						<OutputType>String</OutputType>
-						<Order>40</Order>
-						<Version>1.0</Version>
-					</Header>
-				</DesignerProperty>
-				<DesignerProperty>
-					<Header>
-						<Name>defaultZoomLevel</Name>
-						<Parent>BaseProperty</Parent>
-						<DefaultValue>6</DefaultValue>
-						<Description>Default zoom Level</Description>
-						<Tooltip></Tooltip>
-						<InputType>Integer</InputType>
-						<OutputType>Number</OutputType>
-						<Order>40</Order>
-						<Advanced>false</Advanced>
-						<Version>1.0</Version>
-					</Header>
-				</DesignerProperty>
-				<DesignerProperty>
-					<Header>
-						<Name>legend</Name>
-						<Parent>BaseProperty</Parent>
-						<DefaultValue>"[]"</DefaultValue>
-						<Description>Range for Lengend</Description>
-						<Tooltip></Tooltip>
-						<Advanced>false</Advanced>
-						<InputType>ValuesArray</InputType>
-						<OutputType>Array</OutputType>
-						<Order>40</Order>
-						<Version>1.0</Version>
-					</Header>
-				</DesignerProperty>
-				<DesignerProperty>
-					<Header>
-						<Name>legendText</Name>
-						<Parent>BaseProperty</Parent>
-						<DefaultValue>Legend</DefaultValue>
-						<Description>Legend Text</Description>
-						<Tooltip></Tooltip>
-						<Advanced>false</Advanced>
-						<InputType>String</InputType>
-						<OutputType>String</OutputType>
-						<Order>40</Order>
-						<Version>1.0</Version>
-					</Header>
-				</DesignerProperty>
-				<DesignerProperty>
-					<Header>
-						<Name>sourceText</Name>
-						<Parent>BaseProperty</Parent>
-						<DefaultValue></DefaultValue>
-						<Description>Source Text</Description>
-						<Tooltip></Tooltip>
-						<Advanced>false</Advanced>
-						<InputType>String</InputType>
-						<OutputType>String</OutputType>
-						<Order>40</Order>
-						<Version>1.0</Version>
-					</Header>
-				</DesignerProperty>
-				<DesignerProperty>
-					<Header>
-						<Name>search</Name>
-						<Parent>BaseProperty</Parent>
-						<DefaultValue>"true"</DefaultValue>
-						<Description>Search</Description>
-						<Tooltip> Enable Search Box</Tooltip>
-						<Advanced>false</Advanced>
-						<InputType>Boolean</InputType>
-						<OutputType>Boolean</OutputType>
-						<Order>40</Order>
-						<Version>1.0</Version>
-					</Header>
-				</DesignerProperty>
-			</CustomProperties>
-		</Implementation>
-	</Contents>
+  <Header>
+    <Name>Google Maps Overlay Component</Name>
+    <IName>gMapsOverlayComponent</IName>
+    <Description>Google Maps Overlay Component (By Kleyson Rios)</Description>
+    <Category>COMMUNITYCOMPONENTS</Category>
+    <CatDescription>Community Contributions</CatDescription>
+    <Type>PalleteEntry</Type>
+    <Version>2.0</Version>
+  </Header>
+  <Contents>
+    <Model>
+      <Property type="boolean">executeAtStart</Property>
+      <Property type="string">htmlObject</Property>
+      <Property type="number">listeners</Property>
+      <Property type="function">postFetch</Property>
+      <Property type="function">preExecution</Property>
+      <Property type="function">postExecution</Property>
+      <Property name="parameters">xActionArrayParameter</Property>
+      <Definition name="queryDefinition">
+      <Property type="query">dataSource</Property>
+      </Definition>
+      <Property>mapName</Property>
+      <Property type="function">mapNameConditional</Property>
+      <Property type="function">mapColorConditional</Property>
+      <Property type="function">legendLabelDescConditional</Property>
+      <Property type="function">doubleClickAction</Property>
+      <Property type="function">valueFormat</Property>
+      <Property>width</Property>
+      <Property>height</Property>
+      <Property>centerLatitude</Property>
+      <Property>centerLongitude</Property>
+      <Property>defaultColor</Property>
+      <Property>defaultZoomLevel</Property>
+      <Property type="boolean">disableDoubleClickZoom</Property>
+      <Property type="boolean">zoomControl</Property>
+      <Property type="boolean">panControl</Property>
+      <Property type="boolean">scrollwheel</Property>
+      <Property type="boolean">exportToCSVFileVisible</Property>
+      <Property type="string">exportToCSVFileLocaly</Property>
+      <Property type="string">mapTypeId</Property>
+      <Property type="boolean">mapTypeControl</Property>
+      <Property>legend</Property>
+      <Property>legendLabelDesc</Property>
+      <Property>legendLabelDescFonteColor</Property>
+      <Property>legendLabelDescOrderColor</Property>
+      <Property>legendLabelDescOrderColorConditional</Property>
+      <Property type="integer">legendLabelDescFonteSize</Property>
+      <Property type="boolean">legendCountVisible</Property>
+      <Property type="integer">legendCountFonteSize</Property>
+      <Property type="string">legendOpacity</Property>
+      <Property type="string">legendTitle</Property>
+      <Property type="string">legendPosition</Property>
+      <Property type="string">legendWidth</Property>
+      <Property type="boolean">legendVisible</Property>
+      <Property type="string">icons</Property>
+      <Property type="string">locality</Property>
+      <Property>shapeFillOpacity</Property>
+      <Property>shapeStrokeWeight</Property>
+      <Property>legendText</Property>
+      <Property type="integer">legendTextFonteSize</Property>
+      <Property>sourceText</Property>
+      <Property>search</Property>
+      <Property type="boolean">isColorDefinedInDS</Property>
+      <Property type="boolean">isContinuousMapColor</Property>
+    </Model>
+    <Implementation supportsLegacy="true" supportsAMD="true">
+      <Code src="gmapsoverlay-implementation.js" />
+      <Dependencies>
+        <Dependency src="GMapComponentAsyncLoader.js" version="1.1">GMapComponentAsyncLoader</Dependency>
+      </Dependencies>
+      <Styles>
+        <Style src="gmapsoverlay.css">gMapsOverlayComponent</Style>
+      </Styles>
+      <CustomProperties>
+        <DesignerProperty>
+          <Header>
+            <Name>mapName</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue></DefaultValue>
+            <Description>MapName</Description>
+            <Tooltip>This is the region descriptor file name that must be placed at cde/components/gmapsoverlay/map-def</Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>String</InputType>
+            <OutputType>String</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+
+        <DesignerProperty>
+          <Header>
+            <Name>mapNameConditional</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue></DefaultValue>
+            <Description>MapNameConditional</Description>
+            <Tooltip>Function to return the name in the json/MapName file depending on a condition</Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>JavaScript</InputType>
+            <OutputType>Function</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>mapColorConditional</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue></DefaultValue>
+            <Description>MapColorConditional</Description>
+            <Tooltip>Conditional function that returns a color format (#FFFFFF) to color the map should be declared receiving ex parameter: function (value) {}</Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>JavaScript</InputType>
+            <OutputType>Function</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>height</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>800</DefaultValue>
+            <Description>MapHeight</Description>
+            <Tooltip>if the value blank map assumes 100% of the Height</Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>Integer</InputType>
+            <OutputType>Number</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>width</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue></DefaultValue>
+            <Description>MapWidth</Description>
+            <Tooltip>if the value blank map assumes 100% of the width</Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>Integer</InputType>
+            <OutputType>Number</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>centerLatitude</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue></DefaultValue>
+            <Description>CenterLatitude</Description>
+            <Tooltip> Center latitude for map</Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>Float</InputType>
+            <OutputType>Number</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>centerLongitude</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue></DefaultValue>
+            <Description>CenterLongitude</Description>
+            <Tooltip>Center Longitude for Map</Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>Float</InputType>
+            <OutputType>Number</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>defaultColor</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>#EAEAEA</DefaultValue>
+            <Description>DefaultColor</Description>
+            <Tooltip>Default color for the map</Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>String</InputType>
+            <OutputType>String</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>defaultZoomLevel</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>7</DefaultValue>
+            <Description>ZoomLevel</Description>
+            <Tooltip>level of zoom to load the map</Tooltip>
+            <InputType>Integer</InputType>
+            <OutputType>Number</OutputType>
+            <Order>1</Order>
+            <Advanced>false</Advanced>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+
+        <DesignerProperty>
+          <Header>
+            <Name>zoomControl</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>true</DefaultValue>
+            <Description>ZoomControl</Description>
+            <Tooltip>The enabled/disabled state of the Zoom control.</Tooltip>
+              <Advanced>true</Advanced>
+            <InputType>Boolean</InputType>
+            <OutputType>Boolean</OutputType>
+            <Order>1</Order>
+            <Advanced>false</Advanced>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>panControl</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>true</DefaultValue>
+            <Description>PanControl</Description>
+            <Tooltip>The enabled/disabled state of the Pan control. </Tooltip>
+              <Advanced>true</Advanced>
+            <InputType>Boolean</InputType>
+            <OutputType>Boolean</OutputType>
+            <Order>1</Order>
+            <Advanced>false</Advanced>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>scrollwheel</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>true</DefaultValue>
+            <Description>Scrollwheel</Description>
+            <Tooltip>If false, disables scrollwheel zooming on the map. The scrollwheel is enabled by default. </Tooltip>
+              <Advanced>true</Advanced>
+            <InputType>Boolean</InputType>
+            <OutputType>Boolean</OutputType>
+            <Order>1</Order>
+            <Advanced>false</Advanced>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>mapTypeId</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>terrain</DefaultValue>
+            <Description>MapTypeId</Description>
+            <Tooltip>Identifiers for common MapTypes.(hybrid,roadmap,satellite,terrain)</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType type="valuelist" />
+            <OutputType>String</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+          <Values>
+                <Value display='Terrain'>terrain</Value>
+                <Value display='Hybrid'>hybrid</Value>
+                <Value display='Roadmap'>roadmap</Value>
+                <Value display='Satellite'>satellite</Value>
+          </Values>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>mapTypeControl</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>false</DefaultValue>
+            <Description>MapTypeControl</Description>
+            <Tooltip>The initial enabled/disabled state of the Map type control..</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>Boolean</InputType>
+            <OutputType>Boolean</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>legend</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>"[]"</DefaultValue>
+            <Description>RangeForLengend</Description>
+            <Tooltip></Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>ValuesArray</InputType>
+            <OutputType>Array</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>icons</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>on</DefaultValue>
+            <Description>LabelsIcons</Description>
+            <Tooltip>show icons</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType type="valuelist" />
+            <OutputType>String</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+          <Values>
+            <Value display='On'>on</Value>
+            <Value display='Off'>off</Value>
+          </Values>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>locality</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>on</DefaultValue>
+            <Description>AdministrativeLocality</Description>
+            <Tooltip>Show info Locality</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType type="valuelist" />
+            <OutputType>String</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+          <Values>
+            <Value display='On'>on</Value>
+            <Value display='Off'>off</Value>
+          </Values>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>legendVisible</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>false</DefaultValue>
+            <Description>LegendVisible</Description>
+            <Tooltip>Disable/Enable legend info</Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>Boolean</InputType>
+            <OutputType>Boolean</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>legendText</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>Legend</DefaultValue>
+            <Description>LegendText</Description>
+            <Tooltip>Description for legend</Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>String</InputType>
+            <OutputType>String</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>legendTextFonteSize</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>12</DefaultValue>
+            <Description>LegendTextFonteSize</Description>
+            <Tooltip>Fonte Size for description legend</Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>Integer</InputType>
+            <OutputType>String</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>shapeFillOpacity</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>0.6</DefaultValue>
+            <Description>ShapeFillOpacity</Description>
+            <Tooltip>changes the opacity map</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>Float</InputType>
+            <OutputType>Number</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>shapeStrokeWeight</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>0.5</DefaultValue>
+            <Description>ShapeStrokeWeight</Description>
+            <Tooltip>changing the thickness of the lines on the map</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>Float</InputType>
+            <OutputType>Number</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>sourceText</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue></DefaultValue>
+            <Description>Legend source Text</Description>
+            <Tooltip></Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>String</InputType>
+            <OutputType>String</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>search</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>"true"</DefaultValue>
+            <Description>SearchVisible</Description>
+            <Tooltip> Enable/Disable Search Box</Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>Boolean</InputType>
+            <OutputType>Boolean</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>disableDoubleClickZoom</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>true</DefaultValue>
+            <Description>DisableDoubleClickZoom</Description>
+            <Tooltip>Enables/disables zoom and center on double click. Enabled by default.</Tooltip>
+              <Advanced>true</Advanced>
+            <InputType>Boolean</InputType>
+            <OutputType>Boolean</OutputType>
+            <Order>1</Order>
+            <Advanced>false</Advanced>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>doubleClickAction</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue></DefaultValue>
+            <Description>DoubleClickAction</Description>
+            <Tooltip>Adds option to double click to regions on the map.It requires two parameters in input function (obj, event)
+              the first is clicked object and the second is the event</Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>JavaScript</InputType>
+						<OutputType>Function</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>valueFormat</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue></DefaultValue>
+            <Description>ValueFormat</Description>
+            <Tooltip>A function that return formats the non-null values of numeric dimensions.ex: function(value) {return valueFormated}</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>JavaScript</InputType>
+						<OutputType>Function</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>isColorDefinedInDS</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>true</DefaultValue>
+            <Description>IsColorDefinedInDS</Description>
+            <Tooltip>Map color defined in the datasource. datasource return default is {cities or regions etc., value, color to the map pattern(#FFFFFF)}</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>Boolean</InputType>
+            <OutputType>Boolean</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+
+
+        <DesignerProperty>
+          <Header>
+            <Name>isContinuousMapColor</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>false</DefaultValue>
+            <Description>IsContinuousMapColor</Description>
+            <Tooltip>Color map continues. Necessary disable color in the datasource</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>Boolean</InputType>
+            <OutputType>Boolean</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+
+        <DesignerProperty>
+          <Header>
+            <Name>exportToCSVFileVisible</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>false</DefaultValue>
+            <Description>ExportToCSVFileVisible</Description>
+            <Tooltip>Export data to CSV file</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>Boolean</InputType>
+            <OutputType>Boolean</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>exportToCSVFileLocaly</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>LEGEND</DefaultValue>
+            <Description>ExportToCSVFileLocaly</Description>
+            <Tooltip>Export CSV file locality</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType type='valuelist'/>
+            <OutputType>String</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+          <Values>
+                <Value display='LEGEND'>LEGEND</Value>
+                <Value display='MAP'>MAP</Value>
+          </Values>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>legendLabelDescFonteColor</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>'["black"]'</DefaultValue>
+            <Description>LegendItemLabelDescFonteColor</Description>
+            <Tooltip></Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>Array</InputType>
+            <OutputType>Array</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>legendLabelDesc</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>'[""]'</DefaultValue>
+            <Description>LegendItemLabelDesc</Description>
+            <Tooltip></Tooltip>
+            <Advanced>false</Advanced>
+            <InputType>Array</InputType>
+            <OutputType>Array</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>legendLabelDescConditional</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue></DefaultValue>
+            <Description>LegendItemLabelDescConditional</Description>
+            <Tooltip>Conditional function that must return an array with the description of the legend item</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>JavaScript</InputType>
+            <OutputType>Function</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>legendLabelDescFonteSize</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>12</DefaultValue>
+            <Description>LegendItemLabelDescFonteSize</Description>
+            <Tooltip>Font size the description of the legend item</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>Integer</InputType>
+            <OutputType>String</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>legendCountVisible</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>false</DefaultValue>
+            <Description>LegendItemCountVisible</Description>
+            <Tooltip>Enable / disable The Legend colors counter</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>Boolean</InputType>
+            <OutputType>Boolean</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>legendCountFonteSize</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>12</DefaultValue>
+            <Description>LegendItemCountFonteSize</Description>
+            <Tooltip>Font size of the Legend colors counter</Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>Integer</InputType>
+            <OutputType>String</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>legendOpacity</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>0.8</DefaultValue>
+            <Description>LegendOpacity</Description>
+            <Tooltip></Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>String</InputType>
+            <OutputType>String</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>legendWidth</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>auto</DefaultValue>
+            <Description>LegendWidth</Description>
+            <Tooltip></Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>String</InputType>
+            <OutputType>String</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+        <DesignerProperty>
+          <Header>
+            <Name>legendTitle</Name>
+            <Parent>BaseProperty</Parent>
+            <DefaultValue>Lengend</DefaultValue>
+            <Description>LegendTitle</Description>
+            <Tooltip></Tooltip>
+            <Advanced>true</Advanced>
+            <InputType>String</InputType>
+            <OutputType>String</OutputType>
+            <Order>1</Order>
+            <Version>1.0</Version>
+          </Header>
+        </DesignerProperty>
+      <DesignerProperty>
+        <Header>
+          <Name>legendPosition</Name>
+          <Parent>BaseProperty</Parent>
+          <DefaultValue>BOTTOM_CENTER</DefaultValue>
+          <Description>LegendPosition</Description>
+          <Tooltip>changes the position of the legend</Tooltip>
+          <Advanced>true</Advanced>
+          <InputType type="valuelist" />
+          <OutputType>String</OutputType>
+          <Order>1</Order>
+          <Version>1.0</Version>
+        </Header>
+        <Values>
+              <Value display='BOTTOM_CENTER'>BOTTOM_CENTER</Value>
+              <Value display='BOTTOM_LEFT'>BOTTOM_LEFT</Value>
+              <Value display='RIGHT_BOTTOM'>RIGHT_BOTTOM</Value>
+        </Values>
+      </DesignerProperty>
+      <DesignerProperty>
+        <Header>
+          <Name>legendLabelDescOrderColor</Name>
+          <Parent>BaseProperty</Parent>
+          <DefaultValue>'[]'</DefaultValue>
+          <Description>LegendItemLabelDescOrderColor</Description>
+          <Tooltip>orders the position of the colors in the legend</Tooltip>
+          <Advanced>true</Advanced>
+          <InputType>Array</InputType>
+          <OutputType>Array</OutputType>
+          <Order>1</Order>
+          <Version>1.0</Version>
+        </Header>
+      </DesignerProperty>
+      <DesignerProperty>
+        <Header>
+          <Name>legendLabelDescOrderColorConditional</Name>
+          <Parent>BaseProperty</Parent>
+          <DefaultValue></DefaultValue>
+          <Description>LegendItemLabelDescOrderColorConditional</Description>
+          <Tooltip>Conditional function that must return an array with orders position of the colors in the legend item</Tooltip>
+          <Advanced>true</Advanced>
+          <InputType>JavaScript</InputType>
+          <OutputType>Function</OutputType>
+          <Order>1</Order>
+          <Version>1.0</Version>
+        </Header>
+      </DesignerProperty>
+
+    </CustomProperties>
+    </Implementation>
+  </Contents>
 </DesignerComponent>
