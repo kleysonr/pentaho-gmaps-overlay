@@ -121,7 +121,7 @@ For new maps just create a new definition map and save it in the pentaho-solutio
   - [Dashbord SIM](https://extranet.saude.go.gov.br/public/sim.html "Dashbord SIM")
   - [Dashbord DENGUE](https://extranet.saude.go.gov.br/public/dengue.html "Dashbord DENGUE")
 		
-- **Map by towns**
+- **Map by municipality**
 
 	![MAPA_MUNICIPIOS]( http://fs5.directupload.net/images/170630/9bfwicpi.png )
 
