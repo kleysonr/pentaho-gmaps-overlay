@@ -11,24 +11,23 @@ GMaps Version 1.x tested on Pentaho 4.5 / 4.8<br>
 <br>
 <h1>Sample</h1>
 
-		<a href='https://sourceforge.net/projects/pentahogmapsoverlay/files/'>https://sourceforge.net/projects/pentahogmapsoverlay/files/</a>
+[How to use this plugin](https://sourceforge.net/projects/pentahogmapsoverlay/files/ "How to use this plugin")
 
 <h1>Usage</h1>
 
 See the video for GMapsOverlay Version 1.0.0<br>
 	
-		<a href='http://youtu.be/oyppms5fGhc'>http://youtu.be/oyppms5fGhc</a>
+ [video](http://youtu.be/oyppms5fGhc "Plugin video usage")
 
 <h1>Adding New Maps</h1>
 
 For new maps just create a new definition map and save it in the pentaho-solutions/cde/components/gmapsoverlay/map-def folder.
 
-<h1> Novas funcionalidades do plugin </h1>
+<h1> New plugin features </h1>
 
 - **DoubleClickAction** 
- - Voce pode especificar uma função com dois parâmetros
- serve para voce executar outra ação baseando se no valor do shape que recebeu duplo click
-
+ - You can specify a function with two parameters for you to call another action based on the value of the shape that received double click
+ 
 	    function(obj,e){
   		  if(regiao_mapa !== '[Municipio].[MunicipioX]'){
       	    Dashboards.fireChange('regiao_selecionada_mapa', obj.infowindow.dataPayload.name);
@@ -36,17 +35,17 @@ For new maps just create a new definition map and save it in the pentaho-solutio
 	    } 
       
 - **DisableDoubleClickZoom**:  true | false
- opção de desativar o zoom no double click pois ela interfere se voce for usar a função DoubleClickAction
+ Option to deactivate the zoom in the double click because it interferes if you will use the DoubleClickAction
 
 - **LabelsIcons**: On | Off
- Mostra icones no mapa
+ Show icons on the map
 
 - **AdministrativeLocality**: On | Off
- Mostra informaçoes de locatidades
+ Show location information
  
 - **MapColorConditional**
- Voce pode definir um função que recebe um parametro e baseado no valor desse retorna uma cor no formato #000000.<br>
- Obs: para utilizar esta função a opção isColorDefinedInDS tem que estar false.
+ You can define a function that receives a parameter and based on the value of it returns a color in the format #000000.<br>
+ Obs: The isColorDefinedInDS property must be false for use of this function.
         
         function(value){
             if(value > 20){
@@ -55,7 +54,7 @@ For new maps just create a new definition map and save it in the pentaho-solutio
         }
       
 - **MapNameConditional**
- Aqui voce define uma função que retorna o nome do arquivo shape file que será desenhado no mapa dependendo de uma    determinada condição
+ Here you define a function that returns the file name of the shape that will be drawn on the map depending on a certain condition
  
  
           function(){
@@ -73,13 +72,13 @@ For new maps just create a new definition map and save it in the pentaho-solutio
           }
  
 - **ScrollWhell**
-  Habilita ou desabilita o zoom no scroll
+  Enables or disables scroll zoom
 - **ShapeFillOpacity**
-  Defini a transparencia do shape
+  Here you define the transparency of shape
 - **shapeStrokeWeight**
-  Defini a espessura das linhas do shape
+  Define a shape line thickness
 - **ValueFormat**
-  Aqui voce defini uma função que recebe um parametro de valor onde voce vai formatar o valor e retornar o valor formatado.
+  Here you define a function that receives a value parameter where you will format the value and return the formatted value.
           
           function(value){
               return accounting.toFixed(value, 2)+"%";
@@ -87,11 +86,11 @@ For new maps just create a new definition map and save it in the pentaho-solutio
            } 
   
 - **ZoomControl**
- Habilita/deshabilita controle de zoom
+ Enable / disable zoom control
 - **isColorDefinedInDS**:  true | false
- Se essa opção for **true** é obrigatório trazer a cor(no formato: #00FF00) na terceira coluna do seu datasource
+ If this option is ** true ** it is mandatory to bring the color (in the format: # 00FF00) in the third column of your datasource
 - **LegendItemLabelDescConditional**
- Aqui voce defini uma função que retorna um array com a descrição do item da legenda
+ Here you define a function that returns an array with the description of the legend item
     
       function (){
           if ( MENU_SELECIONADO == PRE_NATAL) {
@@ -102,32 +101,32 @@ For new maps just create a new definition map and save it in the pentaho-solutio
       } 
  
  - **LegendItemLabelDescFonteColor**
-  Cor da descrição do item na legenda aqui voce escrever a cor ex: 'white'
+  Color description of the item in the legend. Here you write the color ex: 'white'
  - **LegendItemLabelDescFonteSize**
-  Tamanha do fonte do item da legenda
+  Legend item font size
  - **LegendOpacity**
-  Transparência da legenda
+  Legend Transparency
  - **LegendPosition**
-  Posição da legenda
+  Position Legend
  - **LegendItemCountVisible**
-  Mostra um contador das cores da legenda que estao no shape
+  Show a counter of the legend colors that are in shape
  - **ExportToCSVFileVisible**
-  Habilita/desabilita opção na legenda de exportar os dados do mapa para csv
+  Enable / disable option in subtitle to export map data to csv
 
  #### Exemplos: ####
  
-- **Dashboards que utilizam esse plugin**
+- **Dashboards that use this plugin**
 
   - [Dashbord SINASC](https://extranet.saude.go.gov.br/public/genesis.html "Dashbord SINASC")
   - [Dashbord SIM](https://extranet.saude.go.gov.br/public/sim.html "Dashbord SIM")
   - [Dashbord DENGUE](https://extranet.saude.go.gov.br/public/dengue.html "Dashbord DENGUE")
 		
-- **Mapa por municipios**
+- **Map by towns**
 
 	![MAPA_MUNICIPIOS]( http://fs5.directupload.net/images/170630/9bfwicpi.png )
 
 
-- **Mapa por Região**
+- **Map by Health Region**
  
 	![MAPA_REGIAO SAUDE]( http://fs5.directupload.net/images/170629/gzhinikv.png )
  
