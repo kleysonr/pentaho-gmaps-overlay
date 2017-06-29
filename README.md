@@ -113,7 +113,7 @@ For new maps just create a new definition map and save it in the pentaho-solutio
  - **ExportToCSVFileVisible**
   Enable / disable option in subtitle to export map data to csv
 
- #### Cases: ####
+ #### Sample: ####
  
 - **Dashboards that use this plugin**
 
