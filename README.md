@@ -35,7 +35,7 @@ For new maps just create a new definition map and save it in the pentaho-solutio
 	    } 
       
 - **DisableDoubleClickZoom**:  true | false
- Option to deactivate the zoom in the double click because it interferes if you will use the DoubleClickAction
+ Option to disable the zoom in the double click because it interferes if you will use the DoubleClickAction
 
 - **LabelsIcons**: On | Off
  Show icons on the map
@@ -44,7 +44,7 @@ For new maps just create a new definition map and save it in the pentaho-solutio
  Show location information
  
 - **MapColorConditional**
- You can define a function that receives a parameter and based on the value of it returns a color in the format #000000.<br>
+ You can define a function that receives a parameter and based on the value of this parameter returns a color in the format #000000.<br>
  Obs: The isColorDefinedInDS property must be false for use of this function.
         
         function(value){
