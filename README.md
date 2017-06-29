@@ -118,9 +118,9 @@ For new maps just create a new definition map and save it in the pentaho-solutio
  
 - **Dashboards feitos que utilizam esse plugin **
 
-		https://extranet.saude.go.gov.br/public/genesis.html
-		https://extranet.saude.go.gov.br/public/sim.html
-		https://extranet.saude.go.gov.br/public/dengue.html
+		[Dashbord SINASC](https://extranet.saude.go.gov.br/public/genesis.html)
+		[Dashbord SIM](https://extranet.saude.go.gov.br/public/sim.html)
+		[Dashbord DENGUE](https://extranet.saude.go.gov.br/public/dengue.html)
 		
 - **Mapa por municipios**
 
