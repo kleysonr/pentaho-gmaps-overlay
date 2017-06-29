@@ -11,12 +11,13 @@ GMaps Version 1.x tested on Pentaho 4.5 / 4.8<br>
 <br>
 <h1>Sample</h1>
 
-<a href='https://sourceforge.net/projects/pentahogmapsoverlay/files/'>https://sourceforge.net/projects/pentahogmapsoverlay/files/</a>
+		<a href='https://sourceforge.net/projects/pentahogmapsoverlay/files/'>https://sourceforge.net/projects/pentahogmapsoverlay/files/</a>
 
 <h1>Usage</h1>
 
 See the video for GMapsOverlay Version 1.0.0<br>
-<a href='http://youtu.be/oyppms5fGhc'>http://youtu.be/oyppms5fGhc</a>
+	
+		<a href='http://youtu.be/oyppms5fGhc'>http://youtu.be/oyppms5fGhc</a>
 
 <h1>Adding New Maps</h1>
 
@@ -117,7 +118,7 @@ For new maps just create a new definition map and save it in the pentaho-solutio
 
 - **Mapa por municipios**
 
-	![MAPA_REGIAO SAUDE]( http://fs5.directupload.net/images/170630/pe68hhbi.png )
+	![MAPA_MUNICIPIOS]( http://fs5.directupload.net/images/170630/9bfwicpi.png )
 
 
 - **Mapa por Região**
