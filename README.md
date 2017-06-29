@@ -115,7 +115,13 @@ For new maps just create a new definition map and save it in the pentaho-solutio
   Habilita/desabilita opção na legenda de exportar os dados do mapa para csv
 
  #### Exemplos: ####
+ 
+- **Dashboards feitos que utilizam esse plugin **
 
+		https://extranet.saude.go.gov.br/public/genesis.html
+		https://extranet.saude.go.gov.br/public/sim.html
+		https://extranet.saude.go.gov.br/public/dengue.html
+		
 - **Mapa por municipios**
 
 	![MAPA_MUNICIPIOS]( http://fs5.directupload.net/images/170630/9bfwicpi.png )
