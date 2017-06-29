@@ -17,7 +17,7 @@ GMaps Version 1.x tested on Pentaho 4.5 / 4.8<br>
 
 See the video for GMapsOverlay Version 1.0.0<br>
 	
- [video](http://youtu.be/oyppms5fGhc "Plugin video usage")
+ [Plugin video usage](http://youtu.be/oyppms5fGhc "Plugin video usage")
 
 <h1>Adding New Maps</h1>
 
