@@ -116,11 +116,11 @@ For new maps just create a new definition map and save it in the pentaho-solutio
 
  #### Exemplos: ####
  
-- **Dashboards feitos que utilizam esse plugin **
+- **Dashboards que utilizam esse plugin**
 
-		[Dashbord SINASC](https://extranet.saude.go.gov.br/public/genesis.html)
-		[Dashbord SIM](https://extranet.saude.go.gov.br/public/sim.html)
-		[Dashbord DENGUE](https://extranet.saude.go.gov.br/public/dengue.html)
+  - [Dashbord SINASC](https://extranet.saude.go.gov.br/public/genesis.html "Dashbord SINASC")
+  - [Dashbord SIM](https://extranet.saude.go.gov.br/public/sim.html "Dashbord SIM")
+  - [Dashbord DENGUE](https://extranet.saude.go.gov.br/public/dengue.html "Dashbord DENGUE")
 		
 - **Mapa por municipios**
 
