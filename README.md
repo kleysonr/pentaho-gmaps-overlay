@@ -115,10 +115,11 @@ For new maps just create a new definition map and save it in the pentaho-solutio
 
  #### Exemplos: ####
 
- - **Mapa por municipios**
- ![MAPA_MUN](http://fs5.directupload.net/images/170629/krq5ktby.png )
+- **Mapa por municipios**
+ 
 
- - **Mapa por Região**
-![MAPA_REGIAO SAUDE]( http://fs5.directupload.net/images/170629/kxk299k7.png )
+- **Mapa por Região**
+ 
+	![MAPA_REGIAO SAUDE]( http://fs5.directupload.net/images/170629/gzhinikv.png )
  
 
