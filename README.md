@@ -116,7 +116,9 @@ For new maps just create a new definition map and save it in the pentaho-solutio
  #### Exemplos: ####
 
 - **Mapa por municipios**
- 
+
+	![MAPA_REGIAO SAUDE]( http://fs5.directupload.net/images/170630/pe68hhbi.png )
+
 
 - **Mapa por Região**
  
